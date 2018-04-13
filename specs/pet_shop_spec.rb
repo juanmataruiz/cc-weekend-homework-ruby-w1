@@ -1,7 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/rg'
 
-end
 require_relative '../pet_shop'
 
 class TestPetShop < Minitest::Test
