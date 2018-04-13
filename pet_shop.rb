@@ -13,3 +13,7 @@ end
 def pets_sold(sell)
   return sell[:admin][:pets_sold]
 end
+
+def increase_pets_sold(actual, add_sell)
+  return actual[:admin][:pets_sold] += add_sell
+end
