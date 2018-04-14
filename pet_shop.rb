@@ -38,3 +38,11 @@ def find_pet_by_name(hash, name)
 end
   return nil
 end
+
+def remove_pet_by_name(pets, name)
+  for pet in pets[:pets]
+    if name == pet[:name]
+      pet[:name] = []
+    end
+  end
+end
