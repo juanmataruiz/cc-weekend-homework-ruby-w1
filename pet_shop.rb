@@ -68,8 +68,7 @@ def customer_pet_count(customers)
   for count in customers[:pets]
     total += count
   end
-  return
-  total
+   return total
 end
 
 def add_pet_to_customer(person, pet)
