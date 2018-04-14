@@ -55,10 +55,6 @@ def stock_count(pet_shop)
   return pet_shop[:pets].length
 end
 
-
-
-# def customer_cash(customers)
-#   for customer in customers[:customers]
-#     return customers[:cash][0]
-# end
-# end
+def customer_cash(customer)
+  customer[:cash]
+end
