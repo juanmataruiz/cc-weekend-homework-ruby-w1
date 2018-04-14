@@ -31,9 +31,10 @@ def pets_by_breed(hash, breed)
 end
 
 def find_pet_by_name(hash, name)
-  all_names = []
   for pets in hash[:pets]
-    all_names.push(name) if pets[:name] == name
+    if (pets[:name] == name)
+      return name
   end
-  return all_names
+end
+  return nil
 end
