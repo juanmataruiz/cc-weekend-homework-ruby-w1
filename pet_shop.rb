@@ -47,13 +47,18 @@ def remove_pet_by_name(pets, name)
   end
 end
 
-# def add_pet_to_stock(pets, new_pet)
-#   for pet in pets[:new_pet].each
-#     pet[:pet_shop].push(new_pet)
-#   end
-#   return new_pet
-# end
-
-def customer_cash(cash)
-  return cash [:admin][:total_cash]
+def add_pet_to_stock(pets, new_pet)
+    pets[:pets].push(new_pet)
 end
+
+def stock_count(pet_shop)
+  return pet_shop[:pets].length
+end
+
+
+
+# def customer_cash(customers)
+#   for customer in customers[:customers]
+#     return customers[:cash][0]
+# end
+# end
