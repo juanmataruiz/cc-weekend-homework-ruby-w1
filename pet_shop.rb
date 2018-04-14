@@ -58,3 +58,8 @@ end
 def customer_cash(customer)
   customer[:cash]
 end
+
+def remove_customer_cash(person, cash)
+  return person[:cash] -= cash
+
+end
