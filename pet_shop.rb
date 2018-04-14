@@ -61,5 +61,13 @@ end
 
 def remove_customer_cash(person, cash)
   return person[:cash] -= cash
+end
 
+def customer_pet_count(customers)
+  total = 0
+  for count in customers[:pets]
+    total += count
+  end
+  return
+  total
 end
