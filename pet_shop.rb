@@ -83,12 +83,13 @@ def customer_can_afford_pet(customer, pet)
   return customer[:cash] > pet[:price]
 end
 
-
-# def sell_pet_to_customer(petshop, pets, customer)
-#   if pets == nil && customer_can_afford_pet(customer, pets)
-#    add_pet_to_customer(customer, pets)
-#    increase_pets_sold(petshop, 1)
-#    total = pets[:price]
-#    add_or_remove_cash(petshop, total)
-#   end
-# end
+# I can't make this test pass (1 failure and 1 error)
+def sell_pet_to_customer(petshop, pets, customer)
+  if pets == nil && customer_can_afford_pet(customer, pets)
+   add_pet_to_customer(customer, pets)
+   customer_cash(customer[:cash])
+   increase_pets_sold(petshop, 1)
+   total = pets[:price]
+   add_or_remove_cash(petshop, total)
+  end
+end
