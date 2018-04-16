@@ -33,7 +33,7 @@ end
 def find_pet_by_name(hash, name)
   for pets in hash[:pets]
     if (pets[:name] == name)
-      return name
+      return pets
   end
 end
   return nil
@@ -56,7 +56,7 @@ def stock_count(pet_shop)
 end
 
 def customer_cash(customer)
-  customer[:cash]
+   return customer[:cash]
 end
 
 def remove_customer_cash(person, cash)
@@ -85,11 +85,12 @@ end
 
 # I can't make this test pass (1 failure and 1 error)
 def sell_pet_to_customer(petshop, pets, customer)
-  if pets == nil && customer_can_afford_pet(customer, pets)
+  if pets != nil && customer_can_afford_pet(customer, pets)
    add_pet_to_customer(customer, pets)
-   customer_cash(customer[:cash])
+   customer_cash(customer)
    increase_pets_sold(petshop, 1)
    total = pets[:price]
+   remove_customer_cash(customer, total)
    add_or_remove_cash(petshop, total)
   end
 end
